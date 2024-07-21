@@ -37,15 +37,6 @@ repos:
         exclude: migrations/
         name: ruff-format
 
-  - id: pdm-lock-check
-    name: pdm-lock-check
-    description: run pdm lock --check to validate config
-    entry: pdm lock --check
-    language: python
-    language_version: python3
-    pass_filenames: false
-    files: ^pyproject.toml$
-
   - repo: local
     hooks:
       - id: tests
@@ -56,6 +47,15 @@ repos:
         always_run: true
         types: [ python ]
         stages: [ manual ]
+
+      - id: pdm-lock-check
+        name: pdm-lock-check
+        description: run pdm lock --check to validate config
+        entry: pdm lock --check
+        language: python
+        language_version: python3
+        pass_filenames: false
+        files: ^pyproject.toml$
 ci:
   autofix_commit_msg: 🎨 [pre-commit.ci] Auto format from pre-commit.com hooks
   autoupdate_commit_msg: ⬆ [pre-commit.ci] pre-commit autoupdate
