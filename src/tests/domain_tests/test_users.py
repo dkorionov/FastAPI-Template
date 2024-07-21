@@ -1,7 +1,8 @@
 import pytest
 from domains.controllers import UserController
-from factories.user import UserFactory
 from services.errors import ResourceNotFoundError
+
+from tests.factories.user import UserFactory
 
 
 class TestUserController:

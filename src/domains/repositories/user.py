@@ -1,4 +1,3 @@
-import uuid
 
 from db.models.user import UserTable
 from services.errors import ResourceNotFoundError

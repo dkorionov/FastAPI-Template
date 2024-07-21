@@ -1,9 +1,10 @@
 import pytest
-from factories.user import UserFactory
 from fastapi import FastAPI, status
 from httpx import AsyncClient
 from services.schemas.oauth import RegisterSchema
 from web.api.oauth import login_url_name, refresh_token_url_name, register_url_name
+
+from tests.factories.user import UserFactory
 
 
 class TestAuthAPI:

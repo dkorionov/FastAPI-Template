@@ -51,7 +51,7 @@ repos:
       - id: tests
         name: Pytest tests
         language: system
-        entry: poetry run pytest src/tests
+        entry: pdm run pytest src/tests
         pass_filenames: false
         always_run: true
         types: [ python ]
